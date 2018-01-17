@@ -1,0 +1,13 @@
+{
+  "name": "webpack.learn",
+  "version": "0.0.1",
+  "description": "Webpack.learn",
+  "main": "index.js",
+  "author": "DimaGashko",
+  "devDependencies": {
+    "html-webpack-plugin": "^2.30.1"
+  },
+  "scripts": {
+    "wstart": "webpack"
+  }
+}
