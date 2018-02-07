@@ -81,7 +81,7 @@ var menu = Object(__WEBPACK_IMPORTED_MODULE_0__menu__["a" /* default */])(
    'page-menu'
 );
 
-document.body.innerHTML = menu;
+document.body.innerHTML += menu;
 
 /***/ }),
 /* 1 */

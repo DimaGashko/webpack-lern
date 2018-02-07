@@ -9,4 +9,4 @@ var menu = getMenu(
    'page-menu'
 );
 
-document.body.innerHTML = menu;
+document.body.innerHTML += menu;
