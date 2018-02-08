@@ -60,22 +60,43 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-/*
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function(arr, className) {
+   return `
+      <ul class="${className}">
+         ${arr.map((item) => `<li>${item}</li>`).join('')}
+      </ul>
+   `
+});
 
-38A -> 1110001010
-56b -> 10101101011
+/***/ }),
+/* 1 */,
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-11011001 -> D9
-10110111 -> B7
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_menu_menu__ = __webpack_require__(0);
 
-*/
+
+var els = {
+   nav: document.querySelector('.nav'),
+}
+
+var menu = Object(__WEBPACK_IMPORTED_MODULE_0__components_menu_menu__["a" /* default */])(
+   ['Item 1', 'Item 2', 'Item 3'], 
+   'page-menu'
+);
+
+els.nav.innerHTML = menu;
+console.log('It is blog');
 
 /***/ })
 /******/ ]);

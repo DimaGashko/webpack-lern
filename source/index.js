@@ -1,12 +1,9 @@
-import getMenu from './menu';
+/*
 
-var els = {
-   nav: document.querySelector('.nav'),
-}
+38A -> 1110001010
+56b -> 10101101011
 
-var menu = getMenu(
-   ['Item 1', 'Item 2', 'Item 3'], 
-   'page-menu'
-);
+11011001 -> D9
+10110111 -> B7
 
-document.body.innerHTML += menu;
+*/
