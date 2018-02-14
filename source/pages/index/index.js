@@ -1,3 +1,6 @@
+import './index.sass';
+import '../base.sass';
+
 import getMenu from '../../components/menu/menu';
 
 var els = {

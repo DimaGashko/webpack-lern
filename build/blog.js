@@ -60,43 +60,75 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: Unexpected character '#' (4:15)\nYou may need an appropriate loader to handle this file type.\n|    margin: 0;\r\n|    padding: 0;\r\n|    background: #eee;");
+
+/***/ }),
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menu_sass__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menu_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__menu_sass__);
+
+
 /* harmony default export */ __webpack_exports__["a"] = (function(arr, className) {
    return `
-      <ul class="${className}">
-         ${arr.map((item) => `<li>${item}</li>`).join('')}
+      <ul class="menu ${className}">
+         ${arr.map((item) => `<li class="menu__item">${item}</li>`).join('')}
       </ul>
    `
 });
 
 /***/ }),
-/* 1 */,
 /* 2 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: Unexpected token (1:0)\nYou may need an appropriate loader to handle this file type.\n| .menu \r\n|    list-style: none\r\n|    padding: 0\r");
+
+/***/ }),
+/* 3 */,
+/* 4 */,
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_menu_menu__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__blog_sass__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__blog_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__blog_sass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__base_sass__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__base_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__base_sass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_menu_menu__ = __webpack_require__(1);
+
+
+
 
 
 var els = {
    nav: document.querySelector('.nav'),
 }
-
-var menu = Object(__WEBPACK_IMPORTED_MODULE_0__components_menu_menu__["a" /* default */])(
+ 
+var menu = Object(__WEBPACK_IMPORTED_MODULE_2__components_menu_menu__["a" /* default */])(
    ['Item 1', 'Item 2', 'Item 3'], 
    'page-menu'
 );
 
 els.nav.innerHTML = menu;
 console.log('It is blog');
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+h1 
+   color: green;
+
 
 /***/ })
 /******/ ]);
