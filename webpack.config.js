@@ -24,7 +24,7 @@ module.exports = {
          template: './src/index.ejs',
          hash: true,
          minify: {
-            collapseWhitespace: true,
+            collapseWhitespace: false,
          }
       }),
    ],
