@@ -1,23 +1,21 @@
 import _ from 'lodash';
-import data from './data.json';
-import './style.css';
-import imgSrc from './img2.png';
+import printMe from './print';
 
 function component() {
    let element = document.createElement('div');
-   
-   console.log(data);
+   let btn = document.createElement('button');
 
    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
    element.classList.add('hello');
 
-   // Add the image to our existing div.
-   var myIcon = new Image();
-   myIcon.src = imgSrc;
+   btn.innerHTML = 'Click me and check the console!';
+   btn.onclick = () => printMe();
 
-   element.appendChild(myIcon);
+   element.appendChild(btn);
  
    return element;
- }
+}
+  
+console.log("Hi"); 
  
  document.body.appendChild(component());

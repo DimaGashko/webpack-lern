@@ -3,9 +3,12 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-   entry: './src/index.js',
+   entry: {
+      app: './src/index.js',
+      print: './src/print.js',
+   },
    output: {
-      filename: 'bundle.js',
+      filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
    },
    module: {
@@ -13,7 +16,7 @@ module.exports = {
    },
    plugins: [
       new HtmlWebpackPlugin({
-         title: 'Webpack learn',
+         title: 'Output Management',
          template: './src/index.ejs',
          hash: true,
          minify: {
