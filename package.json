@@ -6,13 +6,14 @@
    "author": "DimaGashko <dgashko@mail.ua>",
    "license": "MIT",
    "scripts": {
-      "build": "webpack --config webpack.config.js"
+      "build": "webpack"
    },
    "dependencies": {
       "lodash": "^4.17.11"
    },
    "devDependencies": {
       "webpack": "^4.29.0",
-      "webpack-cli": "^3.2.1"
+      "webpack-cli": "^3.2.1",
+      "html-webpack-plugin": "^3.2.0"
    }
 }
