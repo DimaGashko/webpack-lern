@@ -1,15 +1,18 @@
 {
-  "name": "webpack-lern",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/DimaGashko/webpack-lern.git",
-  "author": "DimaGashko <dgashko@mail.ua>",
-  "license": "MIT",
-  "dependencies": {
-
-  },
-  "devDependencies": {
-    "webpack": "^4.29.0",
-    "webpack-cli": "^3.2.1"
-  }
+   "name": "webpack-lern",
+   "version": "1.0.0",
+   "private": true,
+   "repository": "https://github.com/DimaGashko/webpack-lern.git",
+   "author": "DimaGashko <dgashko@mail.ua>",
+   "license": "MIT",
+   "scripts": {
+      "build": "webpack --config webpack.config.js"
+   },
+   "dependencies": {
+      "lodash": "^4.17.11"
+   },
+   "devDependencies": {
+      "webpack": "^4.29.0",
+      "webpack-cli": "^3.2.1"
+   }
 }
