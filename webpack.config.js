@@ -9,25 +9,7 @@ module.exports = {
       path: path.resolve(__dirname, 'dist'),
    },
    module: {
-      rules: [{
-         test: /\.css$/i,
-         use: [
-            'style-loader',
-            'css-loader',
-         ]
-      },
-      {
-         test: /\.(gif|png|jpe?g|svg)$/i,
-         use: [
-            'file-loader',
-            {
-               loader: 'image-webpack-loader',
-               options: {
-                  
-               },
-            },
-         ],
-      }]
+      rules: []
    },
    plugins: [
       new HtmlWebpackPlugin({
