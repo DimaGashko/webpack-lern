@@ -15,7 +15,5 @@ function component() {
  
    return element;
 }
-  
-console.log("Hi"); 
  
- document.body.appendChild(component());
+document.body.appendChild(component());

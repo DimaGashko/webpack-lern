@@ -1,6 +1,9 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-
 const path = require('path');
+
+const webpackPlugins = {
+   HtmlPlugin: require('html-webpack-plugin'),
+   CleanPlugin: require('clean-webpack-plugin'),
+}
 
 module.exports = {
    entry: {
@@ -15,7 +18,8 @@ module.exports = {
       rules: []
    },
    plugins: [
-      new HtmlWebpackPlugin({
+      new webpackPlugins.CleanPlugin(['dist']),
+      new webpackPlugins.HtmlPlugin({
          title: 'Output Management',
          template: './src/index.ejs',
          hash: true,
