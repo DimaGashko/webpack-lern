@@ -1,12 +1,11 @@
-import Print from './print';
+function component() {
+   var element = document.createElement('div');
 
-  function component() {
-    var element = document.createElement('div');
+   element.innerHTML = _join(['Hello', 'webpack'], ' ');
 
-    element.innerHTML = _join(['Hello', 'webpack'], ' ');
-    element.onclick = Print.bind(null, 'Hello webpack!');
+   this.alert('Hmmm, this probably isn\'t a great idea...')
 
-    return element;
-  }
+   return element;
+}
 
-  document.body.appendChild(component());
+document.body.appendChild(component());

@@ -7,7 +7,6 @@ const plugins = {
 }
 
 module.exports = {
-   mode: 'production',
    entry: {
       app: './src/index.js',
       //print: './src/print.js',
@@ -32,7 +31,10 @@ module.exports = {
       }
    },
    module: {
-      rules: []
+      rules: [{
+         test: require.resolve('./src/index.js'),
+         use: 'imports-loader?this=>window'
+      }]
    },
    plugins: [
       new plugins.CleanPlugin(['dist']),
@@ -49,5 +51,5 @@ module.exports = {
          _join: ['lodash', 'join'],
       })
    ],
-   
+
 };
