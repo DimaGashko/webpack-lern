@@ -1,6 +1,7 @@
+const webpack = require('webpack');
 const path = require('path');
 
-const webpackPlugins = {
+const plugins = {
    HtmlPlugin: require('html-webpack-plugin'),
    CleanPlugin: require('clean-webpack-plugin'),
 }
@@ -33,14 +34,16 @@ module.exports = {
       rules: []
    },
    plugins: [
-      new webpackPlugins.CleanPlugin(['dist']),
-      new webpackPlugins.HtmlPlugin({
+      new plugins.CleanPlugin(['dist']),
+      new plugins.HtmlPlugin({
          title: 'Webpack learn',
          template: './src/index.ejs',
-         hash: true,
+         hash: false,
          minify: {
             collapseWhitespace: true,
          }
-      })
+      }),
+      new webpack.HashedModuleIdsPlugin()
    ],
+   
 };
