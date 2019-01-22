@@ -7,6 +7,9 @@ const webpackPlugins = {
 
 module.exports = {
    mode: 'development',
+   optimization: {
+      usedExports: true
+   },
    entry: {
       app: './src/index.js',
       print: './src/print.js',
@@ -29,9 +32,9 @@ module.exports = {
          title: 'Output Management',
          template: './src/index.ejs',
          hash: true,
-         minify: {
+         /*minify: {
             collapseWhitespace: false,
-         }
+         }*/
       })
    ],
 };
