@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 
 const webpackPlugins = {
@@ -8,12 +9,14 @@ const webpackPlugins = {
 module.exports = {
    mode: 'development',
    entry: {
-      app: './src/index.js',
-      print: './src/print.js',
+      //app: './src/index.js',
+      //print: './src/print.js',
+      app: './src/index.js'
    },
    devtool: 'inline-source-map',
    devServer: {
       contentBase: './dist',
+      hot: true,
    },
    output: {
       filename: '[name].bundle.js',
@@ -33,5 +36,6 @@ module.exports = {
             collapseWhitespace: false,
          }
       }),
+      new webpack.HotModuleReplacementPlugin(),
    ],
 };
