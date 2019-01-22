@@ -8,11 +8,12 @@ const webpackPlugins = {
 module.exports = {
    entry: {
       app: './src/index.js',
-      print: './src/print.js',
-      module2: './src/module2.js',
+      //print: './src/print.js',
+      //module2: './src/module2.js',
    },
    output: {
       filename: '[name].bundle.js',
+      chunkFilename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
       publicPath: '/',
    },
