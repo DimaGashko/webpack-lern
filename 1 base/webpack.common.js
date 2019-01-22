@@ -7,6 +7,7 @@ const plugins = {
 }
 
 module.exports = {
+   mode: 'production',
    entry: {
       app: './src/index.js',
       //print: './src/print.js',
@@ -43,7 +44,10 @@ module.exports = {
             collapseWhitespace: true,
          }
       }),
-      new webpack.HashedModuleIdsPlugin()
+      new webpack.HashedModuleIdsPlugin(),
+      new webpack.ProvidePlugin({
+         _join: ['lodash', 'join'],
+      })
    ],
    
 };
