@@ -29,9 +29,9 @@ module.exports = {
          title: 'Output Management',
          template: './src/index.ejs',
          hash: true,
-         /*minify: {
+         minify: {
             collapseWhitespace: false,
-         }*/
+         }
       })
    ],
 };
