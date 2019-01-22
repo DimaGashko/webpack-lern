@@ -6,15 +6,12 @@ const webpackPlugins = {
 }
 
 module.exports = {
-   mode: 'development',
-   optimization: {
-      usedExports: true
-   },
+   mode: 'production',
    entry: {
       app: './src/index.js',
       print: './src/print.js',
    },
-   devtool: 'inline-source-map',
+   //devtool: 'inline-source-map',
    devServer: {
       contentBase: './dist',
    },

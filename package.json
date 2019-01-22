@@ -1,5 +1,6 @@
 {
    "name": "webpack-lern",
+   "sideEffects": false,
    "version": "1.0.0",
    "private": true,
    "repository": "https://github.com/DimaGashko/webpack-lern.git",
