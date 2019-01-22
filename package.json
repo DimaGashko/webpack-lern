@@ -7,10 +7,8 @@
    "author": "DimaGashko <dgashko@mail.ua>",
    "license": "MIT",
    "scripts": {
-      "watch": "webpack --watch",
-      "start": "webpack-dev-server --open",
-      "server": "node server.js",
-      "build": "webpack"
+      "start": "webpack-dev-server --open --config webpack.dev.js",
+      "build": "webpack --config webpack.prod.js"
    },
    "dependencies": {
       "lodash": "^4.17.11"
@@ -26,6 +24,7 @@
       "webpack": "^4.29.0",
       "webpack-cli": "^3.2.1",
       "webpack-dev-middleware": "^3.5.1",
-      "webpack-dev-server": "^3.1.14"
+      "webpack-dev-server": "^3.1.14",
+      "webpack-merge": "^4.2.1"
    }
 }
