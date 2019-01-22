@@ -9,6 +9,7 @@ module.exports = {
    entry: {
       app: './src/index.js',
       print: './src/print.js',
+      module2: './src/module2.js',
    },
    output: {
       filename: '[name].bundle.js',
