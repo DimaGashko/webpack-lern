@@ -2,9 +2,9 @@
 
 module.exports = {
    mode: 'development',
-   entry: './home',
+   entry: './src/home',
    output: {
       path: __dirname + '/dist',
       filename: 'build.js',
-   }
+   },
 }
