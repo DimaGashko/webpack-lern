@@ -33,12 +33,20 @@ module.exports = {
    module: {
       rules: [{
          test: /\.tsx?$/,
-         use: 'ts-loader',
+         use: [
+            {
+               loader: 'ts-loader',
+               options: {
+                  transpileOnly: true,
+                  experimentalWatchApi: true,
+               },
+            },
+         ],
          exclude: /node_modules/
-       }]
+      }]
    },
    resolve: {
-      extensions: [ '.tsx', '.ts', '.js' ]
+      extensions: ['.tsx', '.ts', '.js']
    },
    plugins: [
       new plugins.CleanPlugin(['dist']),

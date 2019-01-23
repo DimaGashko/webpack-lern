@@ -6,6 +6,9 @@ class Test {
 
    constructor() { 
       console.log(this.a, this.b);
+   } 
+
+   public hi() { 
       console.log(split('asdjf asdkasdf sdahfl', ' a'));
    }
 }
