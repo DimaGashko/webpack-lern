@@ -33,7 +33,10 @@ module.exports = {
    module: {
       rules: [{
          test: require.resolve('./src/index.js'),
-         use: 'imports-loader?this=>window'
+         use: 'imports-loader?this=>window',
+      }, {
+         test: require.resolve('./src/globals.js'),
+         use: 'exports-loader?file,parse=helpers.parse',
       }]
    },
    plugins: [
