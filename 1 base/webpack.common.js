@@ -9,7 +9,6 @@ const plugins = {
 module.exports = {
    entry: {
       app: './src/index.js',
-      polyfills: './src/polyfills.js',
       //print: './src/print.js',
       //module2: './src/module2.js',
    },
@@ -32,13 +31,11 @@ module.exports = {
       }
    },
    module: {
-      rules: [{
-         test: require.resolve('./src/index.js'),
-         use: 'imports-loader?this=>window',
-      }, {
-         test: require.resolve('./src/globals.js'),
-         use: 'exports-loader?file,parse=helpers.parse',
-      }]
+      rules: [
+         test: /\.tsx?$/,
+         use: 'ts-loader',
+         exclude: /node_modules/
+       }]
    },
    plugins: [
       new plugins.CleanPlugin(['dist']),
