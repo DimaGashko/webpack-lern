@@ -8,7 +8,9 @@
    "license": "MIT",
    "scripts": {
       "start": "webpack-dev-server --open=false --config webpack.dev.js",
-      "build": "webpack --config webpack.prod.js"
+      "build": "webpack --config webpack.prod.js",
+      "stats": "webpack --config webpack.prod.js --json --profile > stats.json"
+
    },
    "dependencies": {
       "lodash": "^4.17.11"
