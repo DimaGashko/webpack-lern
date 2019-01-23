@@ -4,6 +4,7 @@ class Test {
 
    constructor() { 
       console.log(this.a, this.b);
+      throw 'sadf';
    }
 }
 
