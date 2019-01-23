@@ -1,5 +1,3 @@
-import { file, parse } from './globals';
-
 function component() {
    var element = document.createElement('div');
 

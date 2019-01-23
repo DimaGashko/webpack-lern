@@ -9,6 +9,7 @@ const plugins = {
 module.exports = {
    entry: {
       app: './src/index.js',
+      polyfills: './src/polyfills.js',
       //print: './src/print.js',
       //module2: './src/module2.js',
    },
