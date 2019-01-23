@@ -8,7 +8,7 @@ const plugins = {
 
 module.exports = {
    entry: {
-      app: './src/index.js',
+      app: './src/index.ts',
       //print: './src/print.js',
       //module2: './src/module2.js',
    },
@@ -31,11 +31,14 @@ module.exports = {
       }
    },
    module: {
-      rules: [
+      rules: [{
          test: /\.tsx?$/,
          use: 'ts-loader',
          exclude: /node_modules/
        }]
+   },
+   resolve: {
+      extensions: [ '.tsx', '.ts', '.js' ]
    },
    plugins: [
       new plugins.CleanPlugin(['dist']),
