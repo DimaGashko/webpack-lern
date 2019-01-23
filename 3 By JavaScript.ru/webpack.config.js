@@ -1,8 +1,10 @@
 
 
 module.exports = {
+   mode: 'development',
    entry: './home',
    output: {
-      filemane: 'build.js',
+      path: __dirname + '/dist',
+      filename: 'build.js',
    }
 }
