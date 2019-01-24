@@ -1,16 +1,29 @@
+const path = require('path');
+
 module.exports = {
+   mode: 'development',
    entry: './src/app.ts',
    output: {
-      filename: 'dist/bundle.js',
-      resolve: {
-         extensions: ['.ts', '.js', '.tsx', '.jsx', ''],
-      }
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'bundle.js',
+      publicPath: '/',
    },
    module: {
-      loaders: [{
-         test: /\tsx?$/,
-         exclude: /node_modules/,
-         loader: 'ts-loader',
+      rules: [{
+         test: /\.tsx?$/,
+         use: [
+            {
+               loader: 'ts-loader',
+               options: {
+                  transpileOnly: true,
+                  experimentalWatchApi: true,
+               },
+            },
+         ],
+         exclude: /node_modules/
       }]
-   }
+   },
+   resolve: {
+      extensions: ['.tsx', '.ts', '.js']
+   },
 }

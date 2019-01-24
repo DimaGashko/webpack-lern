@@ -7,7 +7,7 @@ module.exports = function (config) {
       files: ['test/*.ts'],
       exclude: [],
       preprocessors: {
-         'test/**/*ts': ['webpack'],
+         'test/**/*.ts': ['webpack'],
       },
       webpack: {
          module: webpackConfig.module,
@@ -18,7 +18,7 @@ module.exports = function (config) {
       colors: true,
       logLevel: config.LOG_INFO,
       autoWatch: true,
-      browsers: ['PhantomJS'],
+      browsers: ['Chrome'],
       singleRun: false,
       concurrency: Infinity,
    });
