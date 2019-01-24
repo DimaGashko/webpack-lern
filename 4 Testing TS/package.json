@@ -14,8 +14,6 @@
       "@types/mocha": "^5.2.5",
       "@types/sinon": "^7.0.4",
       "chai": "^4.2.0",
-      "gulp": "^4.0.0",
-      "gulp-typedoc": "^2.2.1",
       "karma": "^4.0.0",
       "karma-chai": "^0.1.0",
       "karma-chrome-launcher": "^2.2.0",
