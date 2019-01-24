@@ -12,13 +12,14 @@ module.exports = function (config) {
       webpack: {
          module: webpackConfig.module,
          resolve: webpackConfig.resolve,
+         mode: webpackConfig.mode,
       },
       reporters: ['progress'],
       port: 9876,
       colors: true,
       logLevel: config.LOG_INFO,
       autoWatch: true,
-      browsers: ['Chrome'],
+      browsers: ['PhantomJS'],
       singleRun: false,
       concurrency: Infinity,
    });

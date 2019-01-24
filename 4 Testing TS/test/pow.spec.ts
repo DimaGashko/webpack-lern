@@ -3,12 +3,18 @@ import { expect } from "chai";
 
 describe("Pow", () => {
 
-   it("5^2 => 25", () => {
-      expect(pow(5, 2)).to.be.equal(25);
-   });
+   for (let i = 0; i < 10; i++) { 
 
-   it("5^3 => 125", () => {
-      expect(pow(5, 3)).to.be.equal(125);
-   });
+      for (let j = 0; j < 10; j++) { 
+         const res = pow(i, j);
+         const expectRes = Math.pow(i, j);
 
+         it(`${i}^${j} => ${expectRes}`, () => {
+            expect(res).to.be.equal(expectRes);
+         }); 
+
+      }
+
+   }
+ 
 });
