@@ -50,6 +50,7 @@ module.exports = {
    },
    plugins: [
       new webpack.NoEmitOnErrorsPlugin(),
+      new webpack.optimize.OccurrenceOrderPlugin(),
       new plugins.CleanPlugin(['dist']),
 
       new plugins.HtmlPlugin({
