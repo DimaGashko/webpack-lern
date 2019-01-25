@@ -50,15 +50,14 @@ module.exports = {
    },
    plugins: [
       new webpack.NoEmitOnErrorsPlugin(),
-      new webpack.optimize.OccurrenceOrderPlugin(),
       new plugins.CleanPlugin(['dist']),
 
       new plugins.HtmlPlugin({
-         title: 'Webpack learn',
          template: './src/index.ejs',
          hash: false,
          minify: {
             collapseWhitespace: true,
+            removeComments: true,
          }
       }),
       new webpack.HashedModuleIdsPlugin(),
