@@ -4,13 +4,14 @@ const path = require('path');
 const plugins = {
    HtmlPlugin: require('html-webpack-plugin'),
    CleanPlugin: require('clean-webpack-plugin'),
+   DashboardPlugin: require('webpack-dashboard/plugin'),
 }
 
 module.exports = {
    entry: {
       app: './src/index.ts',
-      //print: './src/print.js',
-      //module2: './src/module2.js',
+      print: './src/print.ts',
+      module2: './src/module2.ts',
    },
    output: {
       filename: '[name].[contenthash].js',
@@ -49,6 +50,7 @@ module.exports = {
       extensions: ['.tsx', '.ts', '.js']
    },
    plugins: [
+      new plugins.DashboardPlugin(),
       new plugins.CleanPlugin(['dist']),
       new plugins.HtmlPlugin({
          title: 'Webpack learn',
@@ -59,9 +61,6 @@ module.exports = {
          }
       }),
       new webpack.HashedModuleIdsPlugin(),
-      new webpack.ProvidePlugin({
-         _join: ['lodash', 'join'],
-      })
    ],
 
 };
