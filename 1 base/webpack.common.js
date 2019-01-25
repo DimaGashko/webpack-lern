@@ -4,7 +4,6 @@ const path = require('path');
 const plugins = {
    HtmlPlugin: require('html-webpack-plugin'),
    CleanPlugin: require('clean-webpack-plugin'),
-   DashboardPlugin: require('webpack-dashboard/plugin'),
 }
 
 module.exports = {
@@ -50,7 +49,6 @@ module.exports = {
       extensions: ['.tsx', '.ts', '.js']
    },
    plugins: [
-      new plugins.DashboardPlugin(),
       new plugins.CleanPlugin(['dist']),
       new plugins.HtmlPlugin({
          title: 'Webpack learn',
