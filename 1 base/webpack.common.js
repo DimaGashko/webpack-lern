@@ -49,8 +49,9 @@ module.exports = {
       extensions: ['.tsx', '.ts', '.js']
    },
    plugins: [
-      new webpack.NoErrorsPlugin(),
+      new webpack.NoEmitOnErrorsPlugin(),
       new plugins.CleanPlugin(['dist']),
+
       new plugins.HtmlPlugin({
          title: 'Webpack learn',
          template: './src/index.ejs',
