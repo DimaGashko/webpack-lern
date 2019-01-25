@@ -49,6 +49,7 @@ module.exports = {
       extensions: ['.tsx', '.ts', '.js']
    },
    plugins: [
+      new webpack.NoErrorsPlugin(),
       new plugins.CleanPlugin(['dist']),
       new plugins.HtmlPlugin({
          title: 'Webpack learn',
