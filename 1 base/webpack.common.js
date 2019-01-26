@@ -53,11 +53,16 @@ module.exports = {
       new plugins.CleanPlugin(['dist']),
 
       new plugins.HtmlPlugin({
+         favicon: 'img/favicon.ico',
          template: './src/index.ejs',
          hash: false,
          minify: {
             collapseWhitespace: true,
             removeComments: true,
+            removeRedundantAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            useShortDoctype: true,
          }
       }),
       new webpack.HashedModuleIdsPlugin(),
