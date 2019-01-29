@@ -48,7 +48,7 @@ module.exports = {
    resolve: {
       extensions: ['.tsx', '.ts', '.js']
    },
-   plugins: [
+   plugins: [ 
       new webpack.NoEmitOnErrorsPlugin(),
       new plugins.CleanPlugin(['dist']),
 
